@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WvKPUcdwjt4eh4xkoX6tsFa53mmoVrYuvc5WBCy6dNlbtkRHBnIU8HNnEBjMjD3nANXx6QNDoidUc0Hn2kBOPg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\janm\\source\\repos\\Quiz\\Quiz.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\janm\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
