@@ -11,10 +11,9 @@ namespace Quiz
     {
         public string ?Quistionstext { get; set; }
         public List<string> Options = new List<string>();
-        public int Correctanswer { get; set; }
+        public string ?Correctanswer { get; set; }
         public string ?Description { get; set; }
     }
-
     public class ParseJson
     {
         public static List<Quiz> FetchFile()
