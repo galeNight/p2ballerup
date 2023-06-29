@@ -6,7 +6,7 @@ namespace Quiz
         // start the program
         static void Main(string[] args)
         {
-            // calls the gui class and run is 
+            // calls the gui class and run it
             new GUI();
         }
     }
