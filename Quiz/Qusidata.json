@@ -1,5 +1,5 @@
 [
-  {
+  { // json file where Quistiontext, option, Correctanswer and Description 
     "Quistionstext": "hvor meget vand bruger den gennemsnitlige dansker om dagen?",
     "Options": [
       "105 liter",

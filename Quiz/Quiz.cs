@@ -9,6 +9,7 @@ namespace Quiz
 {
     public class Quiz
     {
+        // take the difrent string and lay the in ther respected string 
         public string ?Quistionstext { get; set; }
         public List<string> Options = new List<string>();
         public string ?Correctanswer { get; set; }
@@ -16,6 +17,7 @@ namespace Quiz
     }
     public class ParseJson
     {
+        //get the json file and make it redibale
         public static List<Quiz> FetchFile()
         {
             string file = File.ReadAllText("C:\\Users\\janm\\source\\repos\\Quiz\\Qusidata.json");
