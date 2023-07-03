@@ -15,15 +15,16 @@ namespace Quiz
     {
         public void writeanswer()
         {
-            Console.Write("Write you answer:");
+            Console.Write("Write you answer:");//user user answer
         }
         public void option(string option)
         {
             Console.WriteLine(option);
         }
-        public void correct()
+        public void correct(string description)
         {
-            Console.WriteLine("Rigtig!\n");
+            Console.WriteLine("Rigtig!\n");//print right choice
+            Console.WriteLine(description);
         }
         public void wrong()
         {
@@ -38,6 +39,9 @@ namespace Quiz
         {
             Console.WriteLine("quiz complete");//print complete
             Console.ReadKey();
+        }
+        public void text(string questiontext)
+        {
         }
     }
 }

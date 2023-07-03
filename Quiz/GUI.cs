@@ -8,15 +8,18 @@ namespace Quiz
 {
     internal class GUI
     {
+
         private readonly metodes obj = new metodes();
         public GUI()// the data from the json file is use here to run a quiz
         {
-            metodes obj = new metodes();
+
             List<Quizdata> QuizData = ParseJson.FetchFile(); //list with data from json file
 
             foreach (Quizdata quiz in QuizData) // foreach loop that run the data from quiz thro
             {
                 Console.Clear();//clear the the text 
+
+                obj.text(quiz.Quistionstext);
 
                 Console.WriteLine(quiz.Quistionstext); //print Quistionstext from list
 
@@ -29,10 +32,9 @@ namespace Quiz
 
                 string userAnswer = Console.ReadLine();//write the choice
 
-                if (userAnswer.ToUpper() == quiz.Correctanswer.ToUpper()) // if statment about you choice is correct or not
+                if (userAnswer.ToUpper() == quiz.Correctanswer.ToUpper()) // if statmentk about you choice is correct or not
                 {
-                    obj.correct();
-                    Console.WriteLine(quiz.Description);// correct choice and facts about the quistion
+                    obj.correct(quiz.Description);
                 }
                 else
                 {
