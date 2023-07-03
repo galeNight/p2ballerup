@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quiz;
 namespace Quiz
 {
     internal class GUI
     {
+        private readonly metodes obj = new metodes();
         public GUI()// the data from the json file is use here to run a quiz
         {
-            List<Quiz> QuizData = ParseJson.FetchFile(); //list with data from json file
+            metodes obj = new metodes();
+            List<Quizdata> QuizData = ParseJson.FetchFile(); //list with data from json file
 
-            foreach (Quiz quiz in QuizData) // foreach loop that run the data from quiz thro
+            foreach (Quizdata quiz in QuizData) // foreach loop that run the data from quiz thro
             {
                 Console.Clear();//clear the the text 
 
@@ -19,28 +22,25 @@ namespace Quiz
 
                 foreach (string options in quiz.Options)// print Options from list
                 {
-                    Console.WriteLine(options); // prints the choice 
+                    obj.option(options);
                 }
 
-                Console.Write("Write you answer:");
+                obj.writeanswer();
 
                 string userAnswer = Console.ReadLine();//write the choice
 
-                if (userAnswer.ToLower() == quiz.Correctanswer.ToLower()) // if statment about you chice is correct or not
+                if (userAnswer.ToUpper() == quiz.Correctanswer.ToUpper()) // if statment about you choice is correct or not
                 {
-                    Console.WriteLine("Rigtig!\n");
+                    obj.correct();
                     Console.WriteLine(quiz.Description);// correct choice and facts about the quistion
                 }
                 else
                 {
-                    Console.WriteLine("Forkert!\n");//print wrong choice
+                    obj.wrong();
                 }
-                Console.WriteLine();
-                Console.WriteLine("Press any key to continue...\n");//print continue
-                Console.ReadKey();
+                obj.keycontinue();
             }
-            Console.WriteLine("quiz complete");//print complete
-            Console.ReadKey();
+            obj.complete();
         }
     }
 }
