@@ -13,7 +13,7 @@ namespace Quiz
 
             foreach (Quiz quiz in QuizData) // foreach loop that run the data from quiz thro
             {
-                Console.Clear();
+                Console.Clear();//clear the the text 
 
                 Console.WriteLine(quiz.Quistionstext); //print Quistionstext from list
 
@@ -33,13 +33,13 @@ namespace Quiz
                 }
                 else
                 {
-                    Console.WriteLine("Forkert!\n");
+                    Console.WriteLine("Forkert!\n");//print wrong choice
                 }
                 Console.WriteLine();
-                Console.WriteLine("Press any key to continue...\n");
+                Console.WriteLine("Press any key to continue...\n");//print continue
                 Console.ReadKey();
             }
-            Console.WriteLine("quiz complete");
+            Console.WriteLine("quiz complete");//print complete
             Console.ReadKey();
         }
     }
