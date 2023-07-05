@@ -19,30 +19,30 @@ namespace Quiz
             {
                 Console.Clear();//clear the the text 
 
-                obj.text(quiz.Quistionstext);
-
-                Console.WriteLine(quiz.Quistionstext); //print Quistionstext from list
+                obj.text(quiz.Quistionstext); //print Quistionstext from list
 
                 foreach (string options in quiz.Options)// print Options from list
                 {
-                    obj.option(options);
+                    obj.option(options);//print options for quistiontext
                 }
 
-                obj.writeanswer();
+                obj.writeanswer();// print answer for option
 
-                string userAnswer = Console.ReadLine();//write the choice
+                string userAnswer = Console.ReadLine();//read you anser and put it in a string 
 
-                if (userAnswer.ToUpper() == quiz.Correctanswer.ToUpper()) // if statmentk about you choice is correct or not
+                if (userAnswer.ToUpper() == quiz.Correctanswer.ToUpper()) //uses you answer and check if it is correct
                 {
-                    obj.correct(quiz.Description);
+                    obj.correct();//print correct
+                    obj.facts(quiz.Description);// fact about the quistion when you answer correct
                 }
                 else
                 {
-                    obj.wrong();
+                    obj.wrong();//print wrong 
+                    obj.facts(quiz.Description);// fact about the quistion when you answer wrong
                 }
-                obj.keycontinue();
+                obj.keycontinue();//print press eny key to contuinue
             }
-            obj.complete();
+            obj.complete();//orint quiz complete
         }
     }
 }

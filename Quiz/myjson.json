@@ -1,0 +1,21 @@
+[
+  { // json file where Quistiontext, option, Correctanswer and Description 
+    "Quistionstext": "hvor mange constrostor må en class have",
+    "Options": [
+      "1-2",
+      "3-4",
+      "5-6"
+    ],
+    "Correctanswer": "1-2",
+    "Description": "ifølge den mest bugte anbefaling må en class have 1 - 2 constroctors,"
+  },
+  {
+    "Quistionstext":"",
+    "Options" [
+
+    ],
+    "Correctanswer",
+    "Description"
+  }
+
+]

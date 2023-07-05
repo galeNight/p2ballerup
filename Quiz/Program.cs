@@ -21,10 +21,9 @@ namespace Quiz
         {
             Console.WriteLine(option);
         }
-        public void correct(string description)
+        public void correct()
         {
             Console.WriteLine("Rigtig!\n");//print right choice
-            Console.WriteLine(description);
         }
         public void wrong()
         {
@@ -42,6 +41,11 @@ namespace Quiz
         }
         public void text(string questiontext)
         {
+            Console.WriteLine(questiontext);
+        }
+        public void facts(string description)
+        {
+            Console.WriteLine(description);
         }
     }
 }

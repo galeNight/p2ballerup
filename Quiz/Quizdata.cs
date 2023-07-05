@@ -17,11 +17,12 @@ namespace Quiz
     }
     public class ParseJson
     {
-        //get the json file and make it redibale
+        //get the json file and make it readeble
         public static List<Quizdata> FetchFile()
         {
             string file = File.ReadAllText("C:\\Users\\janm\\source\\repos\\Quiz\\Qusidata.json");
             return JsonConvert.DeserializeObject<List<Quizdata>>(file);
         }
+
     }
 }
