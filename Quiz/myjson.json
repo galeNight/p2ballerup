@@ -1,21 +1,66 @@
 [
   { // json file where Quistiontext, option, Correctanswer and Description 
-    "Quistionstext": "hvor mange constrostor må en class have",
+    "Quistionstext": "how many constructors a class can have",
     "Options": [
-      "1-2",
-      "3-4",
-      "5-6"
+      "A. 1-2",
+      "b. 3-4",
+      "C. 5-6"
     ],
-    "Correctanswer": "1-2",
-    "Description": "ifølge den mest bugte anbefaling må en class have 1 - 2 constroctors,"
+    "Correctanswer": "A",
+    "Description": "according to the most common recommendation, a class must have 1 - 2 constructors"
   },
   {
-    "Quistionstext":"",
-    "Options" [
-
+    "Quistionstext": "What is polymorphism used for?",
+    "Options": [
+      "A. inheritance",
+      "B. interfaces",
+      "C. inheritance and interfaces"
     ],
-    "Correctanswer",
-    "Description"
+    "Correctanswer": "C",
+    "Description": "Polymorphism is an important concept in object-oriented programming, referring to the ability of an object to behave differently depending on the type it is being treated as"
+  },
+  {
+    "Quistionstext": "what make up a class",
+    "Options": [
+      "A.keyword",
+      "B. fields",
+      "C. properties",
+      "D. constructors",
+      "E. methodes",
+      "F. access modifiers",
+      "G. all above"
+    ],
+    "Correctanswer": "G",
+    "Description": "a class is a fundamental building block of object-oriented programming. It serves as a blueprint or template for creating objects, defining their properties, behavior, and relationships with other classes"
+  },
+  {
+    "Quistionstext": "what is a Array",
+    "Options": [
+      "A. data structure with multi-size sequeence",
+      "B. data structure with fixed-size sequeence",
+      "C. data structure with somthin else"
+    ],
+    "Correctanswer": "B",
+    "Description": "Array is a data structure that allows you to store a fixed-size sequence of elements of the same type. It provides a way to efficiently organize and access multiple values using a single variable name"
+  },
+  {
+    "Quistionstext": "what is a methode",
+    "Options": [
+      "A. a way to encapapsulate instructions or operations perform a specific task",
+      "B. building block of object-oriented programming",
+      "C. grouping related functionality into named units"
+    ],
+    "Correctanswer": "A",
+    "Description": "methods are blocks of code that encapsulate a set of instructions or operations to perform a specific task. They provide a way to organize and reuse code by grouping related functionality into named units. Methods are one of the fundamental building blocks of procedural and object-oriented programming"
+  },
+  {
+    "Quistionstext": "what is programflow used for",
+    "Options": [
+      "A. break the program",
+      "B. use to chance the structure of the program",
+      "C. control the order the program"
+    ],
+    "Correctanswer": "C",
+    "Description": "Program flow, also known as control flow, refers to the order in which statements and instructions are executed in a computer program. It determines the path of execution and the sequence of operations that are performed based on certain conditions and decisions"
   }
-
 ]

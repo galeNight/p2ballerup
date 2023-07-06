@@ -20,7 +20,7 @@ namespace Quiz
         //get the json file and make it readeble
         public static List<Quizdata> FetchFile()
         {
-            string file = File.ReadAllText("C:\\Users\\janm\\source\\repos\\Quiz\\Qusidata.json");
+            string file = File.ReadAllText("C:\\Users\\janm\\source\\repos\\Quiz\\myjson.json");
             return JsonConvert.DeserializeObject<List<Quizdata>>(file);
         }
 

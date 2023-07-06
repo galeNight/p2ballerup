@@ -12,7 +12,7 @@ namespace Quiz
         private readonly metodes obj = new metodes();
         public GUI()// the data from the json file is use here to run a quiz
         {
-
+            
             List<Quizdata> QuizData = ParseJson.FetchFile(); //list with data from json file
 
             foreach (Quizdata quiz in QuizData) // foreach loop that run the data from quiz thro
