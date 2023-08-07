@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "pbnZDzCY8kbdD1NbgfNaGXR4a9r2HdRTva9/pzJ7g1c=",
+  "Source": "taxatets",
+  "BasePath": "_content/taxatets",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "taxatets\\wwwroot",
+      "Source": "taxatets",
+      "ContentRoot": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\taxatets\\taxatets\\wwwroot\\",
+      "BasePath": "_content/taxatets",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\taxatets\\taxatets\\wwwroot\\css\\site.css",
+      "SourceId": "taxatets",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\taxatets\\taxatets\\wwwroot\\",
+      "BasePath": "_content/taxatets",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ]
+}
