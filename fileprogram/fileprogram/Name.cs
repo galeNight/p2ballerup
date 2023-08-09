@@ -9,7 +9,7 @@ namespace fileprogram
     //public is access modifier and class is referencetype
     public class Name
     {
-        // fild with parameter
+        // fild
         private string _input;//accesmodfier datatype Navn
 
         //constrostor
@@ -18,11 +18,11 @@ namespace fileprogram
             //fild with parameter called argumenter
             _input = input;
         }
-        // int metode
-        public int Lcount()
+        //methode
+        public int Lcount() //access modifier datatype methode name
         {
             //int returntype because of .length(length is a propertys that is in all strings)
-            return _input.Length;
+            return _input.Length;//retyrntype
         }
     }
 }
