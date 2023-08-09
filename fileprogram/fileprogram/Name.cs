@@ -8,7 +8,6 @@ namespace fileprogram
 {
     //public is access modifier and class is referencetype
     public class Name
-
     {
         // fild with parameter
         private string _input;
@@ -26,5 +25,9 @@ namespace fileprogram
             return _input.Length;
         }
     }
-
 }
+//[synlighed] = access modifier
+//[[static]] = ipratelse først
+//[returntype] = hvilken typemetode retuneres
+//navn = selv vælge
+//[argumenter] = mange som man vil og skal have ()
