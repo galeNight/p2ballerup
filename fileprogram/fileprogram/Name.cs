@@ -12,10 +12,10 @@ namespace fileprogram
         // fild with parameter
         private string _input;//accesmodfier datatype Navn
 
-        //constrostor, access modifier referencetype and parameter
-        public Name(string input)
+        //constrostor
+        public Name(string input)//access modifier referencetype, parameter
         {
-            //fild with parameter
+            //fild with parameter called argumenter
             _input = input;
         }
         // int metode
