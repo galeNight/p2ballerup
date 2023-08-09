@@ -1,0 +1,15 @@
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.csproj.AssemblyReference.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.AssemblyInfoInputs.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.AssemblyInfo.cs
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.csproj.CoreCompileInputs.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\bin\Debug\net7.0\fileprogram.exe
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\bin\Debug\net7.0\fileprogram.deps.json
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\bin\Debug\net7.0\fileprogram.runtimeconfig.json
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\bin\Debug\net7.0\fileprogram.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\bin\Debug\net7.0\fileprogram.pdb
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\refint\fileprogram.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.pdb
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\fileprogram.genruntimeconfig.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\fileprogram\fileprogram\obj\Debug\net7.0\ref\fileprogram.dll
