@@ -10,7 +10,7 @@ namespace fileprogram
     public class Name
     {
         // fild with parameter
-        private string _input;
+        private string _input;//accesmodfier datatype Navn
 
         //constrostor, access modifier referencetype and parameter
         public Name(string input)
@@ -31,3 +31,4 @@ namespace fileprogram
 //[returntype] = hvilken typemetode retuneres
 //navn = selv vælge
 //[argumenter] = mange som man vil og skal have ()
+//_ i parameter for at viser at den liger i classen
