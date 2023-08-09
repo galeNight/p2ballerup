@@ -27,3 +27,4 @@ C:\Users\EL-SUPPLY\source\repos\jannickmørup\taxatets\taxatets\obj\Debug\net7.0
 C:\Users\EL-SUPPLY\source\repos\jannickmørup\taxatets\taxatets\obj\Debug\net7.0\taxatets.pdb
 C:\Users\EL-SUPPLY\source\repos\jannickmørup\taxatets\taxatets\obj\Debug\net7.0\taxatets.genruntimeconfig.cache
 C:\Users\EL-SUPPLY\source\repos\jannickmørup\taxatets\taxatets\obj\Debug\net7.0\ref\taxatets.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\taxatets\taxatets\bin\Debug\net7.0\Pages\data.json

@@ -1,7 +1,21 @@
-﻿@page "/"
+﻿@using taxatets.data
+@page "/"
 
+<p>
+    @(new Calculation(new Parameters()
+{
+    startingprices = 37m,
+    priceprkm = 12.75m,
+    priceprmin = 5.75m
+},10m,12m).Getprice())
+</p>
 
-
-<h1>Hello, world!</h1>
-
-
+<table>
+    <tr>
+        <td>
+            <select>
+                
+            </select>
+        </td>
+    </tr>
+</table>

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using taxatets.service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -13,6 +14,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+Parameterservice pm = new Parameterservice();
+pm.DoThis();
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
