@@ -1,21 +1,30 @@
 ﻿@using taxatets.data
 @page "/"
 
-<p>
-    @(new Calculation(new Parameters()
-{
-    startingprices = 37m,
-    priceprkm = 12.75m,
-    priceprmin = 5.75m
-},10m,12m).Getprice())
-</p>
+
 
 <table>
     <tr>
         <td>
             <select>
-                
+                <option value="day">day</option>
+                <option value="night">night</option>
             </select>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <p>
+                starndard pris for 10km og 12min(day-06-18)
+                @(new Calculation(new Parameters()
+            {
+                startingprices = 37m,
+                priceprkm = 12.75m,
+                priceprmin = 5.75m
+            }, 10m, 12m).Getprice())
+            </p>
         </td>
     </tr>
 </table>
