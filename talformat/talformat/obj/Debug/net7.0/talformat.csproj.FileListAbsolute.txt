@@ -1,0 +1,15 @@
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\bin\Debug\net7.0\talformat.exe
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\bin\Debug\net7.0\talformat.deps.json
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\bin\Debug\net7.0\talformat.runtimeconfig.json
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\bin\Debug\net7.0\talformat.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\bin\Debug\net7.0\talformat.pdb
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.csproj.AssemblyReference.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.AssemblyInfoInputs.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.AssemblyInfo.cs
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.csproj.CoreCompileInputs.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\refint\talformat.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.pdb
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\talformat.genruntimeconfig.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\talformat\talformat\obj\Debug\net7.0\ref\talformat.dll
