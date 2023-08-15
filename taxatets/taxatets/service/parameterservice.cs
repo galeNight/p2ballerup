@@ -6,22 +6,23 @@ namespace taxatets.service
 {
     public class Parameterservice
     {
-        static string filepath = Path.Combine(Environment.CurrentDirectory, "Pages\\data.json");
-        static Parameters parameters = new Parameters() 
+        private string filepath = Path.Combine(Environment.CurrentDirectory, "Pages\\data.json");
+        public string JsonString { get; }
+        private readonly Parameters _parameters;
+        private readonly JsonSerializerOptions _option;
+
+        public Parameterservice(Parameters parameters)
         {
-            startingprices = 37m,
-            priceprkm = 12.75m,
-            priceprmin = 5.75m
-        };
-        static JsonSerializerOptions option = new JsonSerializerOptions()
-        {
-            WriteIndented = true,
-        };
-        string jsonString = JsonSerializer.Serialize(parameters, option);
+            // Test Parameret skal hentes fra DB
+            _parameters = parameters;
+            _option = new JsonSerializerOptions { WriteIndented = true };
+
+            JsonString = JsonSerializer.Serialize(_parameters, _option);
+        }
 
         public void DoThis()
         {
-            File.WriteAllText(filepath, jsonString);
+            File.WriteAllText(filepath, JsonString);
         }
     }
 }

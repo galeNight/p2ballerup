@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using taxatets.data;
 using taxatets.service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-Parameterservice pm = new Parameterservice();
+Parameters obj = new Parameters { startingprices = 37m, priceprkm = 12.75m, priceprmin = 5.75m };
+Parameterservice pm = new Parameterservice(obj);
 pm.DoThis();
 app.UseHttpsRedirection();
 
@@ -23,6 +25,6 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+app.MapFallbackToPage("/hot go _Host");
 
 app.Run();

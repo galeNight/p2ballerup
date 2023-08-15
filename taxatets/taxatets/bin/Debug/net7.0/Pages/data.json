@@ -1,5 +1,41 @@
+//{
+//  "startingprices": 37,
+//  "priceprkm": 12.75,
+//  "priceprmin": 5.75
+//}
+
 {
-  "startingprices": 37,
-  "priceprkm": 12.75,
-  "priceprmin": 5.75
+  "car": {
+    "almvogne": {
+      "startPrice":,
+      "kilometer":,
+      "minuteprice":
+    },
+    "almvogneaften": {
+      "startPrice":,
+      "kilometer":,
+      "minuteprice":
+    },
+    "storevogneminibus": {
+      "startPrice":,
+      "kilometer":,
+      "minuteprice":
+    },
+    "storevogneminibusaften": {
+      "startPrice":,
+      "kilometer":,
+      "minuteprice":
+    }
+  },
+  "additional": {
+    "Bike":,
+    "Carrying":,
+    "Airport":,
+    "5-6passagerer":,
+    "Liftcar":,
+    "Øresund":,
+    "Storebæltsbroen":,
+    "Standardturday":,
+
+  }
 }

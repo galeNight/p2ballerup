@@ -18,6 +18,5 @@ namespace taxatets.data
         {
             return Parameters.startingprices + Parameters.priceprkm * Antalkm + Parameters.priceprmin * Antalmin;
         }
-        
     }
 }
