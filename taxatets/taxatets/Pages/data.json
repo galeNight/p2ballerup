@@ -1,9 +1,8 @@
-//{
-//  "startingprices": 37,
-//  "priceprkm": 12.75,
-//  "priceprmin": 5.75
-//}
-
+{
+  "startingprices": 37,
+  "priceprkm": 12.75,
+  "priceprmin": 5.75
+}
 {
   "car": {
     "almvogne": {
