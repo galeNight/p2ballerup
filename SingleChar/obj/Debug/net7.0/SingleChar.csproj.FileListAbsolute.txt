@@ -1,0 +1,15 @@
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\bin\Debug\net7.0\SingleChar.exe
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\bin\Debug\net7.0\SingleChar.deps.json
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\bin\Debug\net7.0\SingleChar.runtimeconfig.json
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\bin\Debug\net7.0\SingleChar.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\bin\Debug\net7.0\SingleChar.pdb
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.csproj.AssemblyReference.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.AssemblyInfoInputs.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.AssemblyInfo.cs
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.csproj.CoreCompileInputs.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\refint\SingleChar.dll
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.pdb
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\SingleChar.genruntimeconfig.cache
+C:\Users\EL-SUPPLY\source\repos\jannickmørup\SingleChar\obj\Debug\net7.0\ref\SingleChar.dll
