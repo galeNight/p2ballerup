@@ -12,12 +12,12 @@
         }
         void charName()
         {
-            string Name = "Jannick Mørup";
-            foreach (char output in Name)
+            string Name = "Jannick Mørup"; // navn variable
+            foreach (char output in Name) //læser navn og liger hvert ord i output
             {
-                Console.WriteLine(output);
+                Console.WriteLine(output);//udskriver hvert ord i navn
             }
-            Console.WriteLine();
+            Console.WriteLine();// laver mellemrum
         }
         void arrayone()
         {
@@ -46,11 +46,12 @@
         }
         void arrayname()
         {
-            string name = Console.ReadLine();
+            string name = Console.ReadLine();//string name =console.readline læser hvad man har  skrevet 
             Console.WriteLine();
             for(int i = name.Length - 1; i >= 0; i--)
+            //for() gøre det i et loop. int i = name.length -1 læser navnet i tal. i<=0 kontrolere hvilken bugstav refererer. i-- tæller ned
             {
-                Console.WriteLine(name[i]);
+                Console.WriteLine(name[i]); //console.writeline(name[i]); udskriver navnet baglæns
             }
         }
     }
