@@ -4,14 +4,17 @@
     {
         static void Main(string[] args)
         {
-            string name = "qwer";
-            int index = 0;
-            while (index < name.Length)
+            Program obj = new Program();
+            obj.charName();
+        }
+        void charName()
+        {
+            string Name = "Jannick Mørup";
+            foreach (char output in Name)
             {
-                char character = name[index];
-                Console.WriteLine(character);
-                index++;
+                Console.WriteLine(output);
             }
+            Console.WriteLine();
         }
     }
 }
