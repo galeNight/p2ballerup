@@ -1,17 +1,29 @@
 ﻿@page "/"
 @inject MyClass2 MyClass2
+<!-- inject the class and name to be use in this file -->
 
-<!--this is how i can use a class from a cs file to be displayed in a razor file -->
+<!-- this is how i can use a class from a cs file to be displayed in a razor file -->
+<!-- MyClass is the object and the name have the data and is desplayed with help of the object -->
 <h1> What is you name </h1>
 <p> @myClass.name</p>
 
-<!-- this is how i use ínject to display name and age in razer file from a cs file -->
+<!-- this is how i use ínject to display name and age in razer file from a cs file from MyClass2 -->
+<!-- MyClass2 is the name i gave the object and the name and age is the data that is displayed with help af the object -->
 <h1> What is you name and age </h1>
 <p>Name: @MyClass2.Name</p>
 <p>Age: @MyClass2.Age</p>
 
 
 @code{
-    <!-- this is how the object is displayed for it can be use in the razor file -->
+    <!-- this is how the object is displayed for it can be use in the razor file from MyClass -->
      MyClass myClass = new MyClass();
 }
+
+
+<!-- inject is a way to use a file from a fcs file to a html/razor file -->
+<!-- to use the inject metode the name of the Myclass and add a name to be use in this razort file -->
+
+<!-- the code methode is a way to take MyClass and make a opject and use it in this razor file -->
+<!-- it is done by takeing a class and attach a object to it and use the data in the class -->
+
+<!-- builder.Services.AddSingleton<MyClass2>() is use to attach it to inject from the cs file-->
