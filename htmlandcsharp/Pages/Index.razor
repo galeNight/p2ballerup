@@ -1,0 +1,17 @@
+﻿@page "/"
+@inject Myclass2 a
+
+<!--this is how i can use a class from a cs file to be displayed in a razor file -->
+<h1>welcom to a emty page</h1>
+<p> @h.name</p>
+
+<!-- this is how i use ínject to display name and age in razer file from a cs file -->
+<h1> what is you name and age</h1>
+<p>Name: @a.Name</p>
+<p>Age: @a.Age</p>
+
+
+@code{
+    <!-- this is how the object is displayed for it can be use in the razor file -->
+     myclass h = new myclass();
+}
