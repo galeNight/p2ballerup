@@ -1,9 +1,10 @@
 ﻿namespace htmlandcsharp.Pages
 {
 
-    public class Myclass2
+    public class MyClass2
     {
-        public string Name = "jannick";
+        //this class contains two fields with name and age
+        public string Name = "Jannick";
         public int Age = 27;
     }
 }

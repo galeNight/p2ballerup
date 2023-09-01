@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components.Web;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<Myclass2>();//this is for a object can be use in a htlm/blazer file
+builder.Services.AddSingleton<MyClass2>();//this is for a object can be use in a htlm/blazer file
 
 var app = builder.Build();
 
@@ -16,12 +16,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
-
 app.Run();

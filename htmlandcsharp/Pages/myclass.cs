@@ -2,9 +2,9 @@
 
 namespace htmlandcsharp.Pages
 {
-    public class myclass
+    public class MyClass
     {
-        //this is a public class that contains a string field with a name
-        public string name  = "jannick";
+        //this class contains one field with a name
+        public string name  = "Jannick";
     }
 }
