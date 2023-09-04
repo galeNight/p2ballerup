@@ -4,12 +4,12 @@
 
 <!-- this is how i can use a class from a cs file to be displayed in a razor file -->
 <!-- MyClass is the object and the name have the data and is desplayed with help of the object -->
-<h1> What is you name </h1>
-<p> @myClass.name</p>
+<h1> name from <!--from code--></h1>
+<p>Name: @myClass.name</p>
 
 <!-- this is how i use ínject to display name and age in razer file from a cs file from MyClass2 -->
 <!-- MyClass2 is the name i gave the object and the name and age is the data that is displayed with help af the object -->
-<h1> What is you name and age </h1>
+<h1>name and age <!--from inject--> </h1>
 <p>Name: @MyClass2.Name</p>
 <p>Age: @MyClass2.Age</p>
 
@@ -20,7 +20,7 @@
 }
 
 
-<!-- inject is a way to use a file from a fcs file to a html/razor file -->
+<!-- inject is a way to use a file from a cs file to a html/razor file -->
 <!-- to use the inject metode the name of the Myclass and add a name to be use in this razort file -->
 
 <!-- the code methode is a way to take MyClass and make a opject and use it in this razor file -->
