@@ -1,0 +1,17 @@
+﻿@page "/"
+@using Api.classes
+
+
+@foreach(var item in test.response.Items)
+{
+    <label>@item.Summary, @item.Start, @item.End</label><br/>
+}
+
+@code {
+    api test = new api();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}
