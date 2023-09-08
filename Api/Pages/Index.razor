@@ -2,29 +2,35 @@
 @using Api.classes
 @inject IJSRuntime JSRuntime
 
-
-<h1>current and next 6 days</h1>
-<table>
-    <thead>
-        <tr>
-            <th>Dayname and Date</th>
-            <th>Holiday</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (int i = 0; i < 7; i++) // Loop through the next 6 days
-        {
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <h1>current and next 6 days</h1>
+    <table>
+        <thead>
             <tr>
-                <!-- Display the current date in the specified format -->
-                <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
-                <!-- Check if the current date is a holiday and display the holiday name if it is,
-                otherwise display "Not a holiday" -->
-                <td>@(test.IsHoliday(currentDate)? GetHolidayName(currentDate):"not a holiday")</td>
+                <th>Dayname and Date</th>
+                <th>Holiday</th>
             </tr>
-            UpdateDate(1);// Move to the next day
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < 7; i++) // Loop through the next 6 days
+            {
+                <tr>
+                    <!-- Display the current date in the specified format -->
+                    <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
+                    <!-- Check if the current date is a holiday and display the holiday name if it is,
+                    otherwise display "Not a holiday" -->
+                    <td>@(test.IsHoliday(currentDate) ? GetHolidayName(currentDate) : "not a holiday")</td>
+                </tr>
+                UpdateDate(1);// Move to the next day
+            }
+        </tbody>
+    </table>
+    </body>
+</html>
 
 @code {
     Api test = new Api();
