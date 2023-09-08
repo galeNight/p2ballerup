@@ -1,17 +1,57 @@
 ﻿@page "/"
 @using Api.classes
+@inject IJSRuntime JSRuntime
 
 
-@foreach(var item in test.response.Items)
-{
-    <label>@item.Summary, @item.Start, @item.End</label><br/>
-}
+<h1>current and next 6 days</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Dayname and Date</th>
+            <th>Holiday</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < 7; i++) // Loop through the next 6 days
+        {
+            <tr>
+                <!-- Display the current date in the specified format -->
+                <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
+                <!-- Check if the current date is a holiday and display the holiday name if it is,
+                otherwise display "Not a holiday" -->
+                <td>@(test.IsHoliday(currentDate)? GetHolidayName(currentDate):"not a holiday")</td>
+            </tr>
+            UpdateDate(1);// Move to the next day
+        }
+    </tbody>
+</table>
 
 @code {
-    api test = new api();
+    Api test = new Api();
+    DateTime currentDate = DateTime.Now;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+    }
+
+    private void UpdateDate(int daysToAdd)
+    {
+        currentDate = currentDate.AddDays(daysToAdd);
+    }
+
+    // Method to retrieve the holiday name for a given date
+    string GetHolidayName(DateTime date)
+    {
+        foreach (var item in test.response.Items)
+        {
+            DateTime startDate = DateTime.Parse(item.Start.Date);
+            //Check if the start date of a holiday event matches the given date
+            if (startDate.Date == date.Date)
+            {
+                return item.Summary;// returns the holyday name/event day
+            }
+        }
+        return "not a holiday"; // If no matching holiday is found, return "not a holiday"
     }
 }

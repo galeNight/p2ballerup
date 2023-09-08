@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FtBadDPm9krZtEGoFA1WoMxidHL575j9CV/XdQ7Qsvo=",
+  "Hash": "yYp/9vzvTTwVdeikLAXw15ohZd3CmpoauAonMK3pikE=",
   "Source": "Api",
   "BasePath": "_content/Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Api\\wwwroot",
       "Source": "Api",
-      "ContentRoot": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bruger\\Desktop\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Bruger\\Desktop\\Api\\wwwroot\\css\\site.css",
       "SourceId": "Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bruger\\Desktop\\Api\\wwwroot\\",
       "BasePath": "_content/Api",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
