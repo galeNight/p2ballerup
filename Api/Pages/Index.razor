@@ -19,11 +19,11 @@
             @for (int i = 0; i < 7; i++) // Loop through the next 6 days
             {
                 <tr>
-                    <!-- Display the current date in the specified format -->
+                    <!-- Display the current date in day month year -->
                     <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
                     <!-- Check if the current date is a holiday and display the holiday name if it is,
                     otherwise display "Not a holiday" -->
-                    <td>@(test.IsHoliday(currentDate) ? GetHolidayName(currentDate) : "not a holiday")</td>
+                    <td>@(obj.IsHoliday(currentDate) ? GetHolidayName(currentDate) : "not a holiday")</td>
                 </tr>
                 UpdateDate(1);// Move to the next day
             }
@@ -33,7 +33,7 @@
 </html>
 
 @code {
-    Api test = new Api();
+    Api obj = new Api();
     DateTime currentDate = DateTime.Now;
 
     protected override void OnInitialized()
@@ -49,7 +49,7 @@
     // Method to retrieve the holiday name for a given date
     string GetHolidayName(DateTime date)
     {
-        foreach (var item in test.response.Items)
+        foreach (var item in obj.response.Items)
         {
             DateTime startDate = DateTime.Parse(item.Start.Date);
             //Check if the start date of a holiday event matches the given date

@@ -17,13 +17,13 @@ namespace Api.classes
                 ApiKey = ApiKey,
                 ApplicationName = "api key example",
             });
-
+            // sends a request to api and get responce with specfide item 
             var request = service.Events.List(CalenderId);
             request.Fields = "items(summary,start,end)";
             response = request.Execute();
         }
 
-        public bool IsHoliday(DateTime date)
+        public bool IsHoliday(DateTime date) 
         {
             foreach (var item in response.Items)
             {
