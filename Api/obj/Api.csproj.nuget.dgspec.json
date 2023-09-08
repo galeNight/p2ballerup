@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\Api.csproj": {}
+    "C:\\Users\\Bruger\\Desktop\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\Api.csproj": {
+    "C:\\Users\\Bruger\\Desktop\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\EL-SUPPLY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EL-SUPPLY\\source\\repos\\jannickmørup\\Api\\obj\\",
+        "projectPath": "C:\\Users\\Bruger\\Desktop\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bruger\\Desktop\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\EL-SUPPLY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,7 +27,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
