@@ -16,14 +16,15 @@
             </tr>
         </thead>
         <tbody>
-            @for (int i = 0; i < 7; i++) // Loop through the next 6 days
+            @for (int i = 0; i < 365; i++) // Loop through the next 6 days
             {
                 <tr>
                     <!-- Display the current date in day month year -->
                     <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
+
                     <!-- Check if the current date is a holiday and display the holiday name if it is,
                     otherwise display "Not a holiday" -->
-                    <td>@(obj.IsHoliday(currentDate) ? GetHolidayName(currentDate) : "not a holiday")</td>
+                    <td>@(obj.IsHoliday(currentDate) ? GetHolidayName(currentDate):"")</td>
                 </tr>
                 UpdateDate(1);// Move to the next day
             }
@@ -33,14 +34,11 @@
 </html>
 
 @code {
+    //objcet of Api class
     Api obj = new Api();
     DateTime currentDate = DateTime.Now;
 
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-    }
-
+    //add dayes and then update 
     private void UpdateDate(int daysToAdd)
     {
         currentDate = currentDate.AddDays(daysToAdd);

@@ -6,7 +6,7 @@ namespace Api.classes
 {
     public class Api
     {
-        const string ApiKey = "AIzaSyB3Lb5siSaXbEB8ZanqW25wSOPLPguO3O4"; // my APi KEY
+        const string ApiKey = "AIzaSyB3Lb5siSaXbEB8ZanqW25wSOPLPguO3O4"; // my APi KEY google
         const string CalenderId = "da.danish#holiday@group.v.calendar.google.com";// calendar id
         public Google.Apis.Calendar.v3.Data.Events response { get; set; }
 
@@ -36,5 +36,8 @@ namespace Api.classes
             }
             return false;// Returns false if it's not a holiday
         }
+
+
     }
+
 }
