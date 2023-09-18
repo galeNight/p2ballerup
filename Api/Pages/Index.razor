@@ -2,47 +2,46 @@
 @using Api.classes
 @inject IJSRuntime JSRuntime
 
-<!DOCTYPE html>
-<html>
-    <head>
-    </head>
-    <body>
-    <h1>current and next 6 days</h1>
-    <table>
-        <thead>
+    <h1 class="H">current and next 6 days</h1>
+    <table class="Table">
+        <thead class="Thead">
             <tr>
                 <th>Dayname and Date</th>
                 <th>Holiday</th>
             </tr>
         </thead>
-        <tbody>
-            @for (int i = 0; i < 365; i++) // Loop through the next 6 days
+        <tbody class="Tbody">
+            @for (int i = 0; i < 7; i++) // Loop through the next 6 days
             {
                 <tr>
                     <!-- Display the current date in day month year -->
                     <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
 
                     <!-- Check if the current date is a holiday and display the holiday name if it is,
-                    otherwise display "Not a holiday" -->
+                    otherwise display "" -->
                     <td>@(obj.IsHoliday(currentDate) ? GetHolidayName(currentDate):"")</td>
                 </tr>
                 UpdateDate(1);// Move to the next day
             }
         </tbody>
     </table>
-    </body>
-</html>
+
 
 @code {
     //objcet of Api class
     Api obj = new Api();
     DateTime currentDate = DateTime.Now;
+    //Sql obj2 = new Sql();
 
     //add dayes and then update 
     private void UpdateDate(int daysToAdd)
     {
         currentDate = currentDate.AddDays(daysToAdd);
     }
+    //public void onanitilatior()
+    //{
+    //    obj2.test();
+    //}
 
     // Method to retrieve the holiday name for a given date
     string GetHolidayName(DateTime date)
@@ -56,6 +55,6 @@
                 return item.Summary;// returns the holyday name/event day
             }
         }
-        return "not a holiday"; // If no matching holiday is found, return "not a holiday"
+        return ""; // If no matching holiday is found, return ""
     }
 }
