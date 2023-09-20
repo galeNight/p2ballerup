@@ -7,7 +7,7 @@
     <input id="Fname" class="form-control" @bind="personobj.Fname" placeholder="Firstname" />
     <input id="Lname" class="form-control" @bind="personobj.Lname" placeholder="Lastname" />
     <input id="Bday" type="date" class="form-control" @bind="personobj.Bday" placeholder="Birthday" />
-    <button class="btn btn-primary" @onclick="() => sqlobj.AddSqlPerson(personobj)">confirm</button>
+    <button class="btn btn-primary" @onclick="Register">confirm</button>
 </div>
 <table>
     <thead>
@@ -43,6 +43,8 @@
             </tr>
         }
     </tbody>
+    <button class="btn btn-primary" @onclick="backwards">6 daysbackwards</button>
+    <button class="btn btn-primary" @onclick="Forward">6 days Forward</button>
 </table>
 
 @code {
@@ -52,11 +54,7 @@
     Sql sqlobj = new Sql();
     List<Person> Bdays;
 
-    protected override void OnInitialized()
-    {
-        Bdays = sqlobj.GetBirthdayList();
-        
-    }
+    protected override void OnInitialized() => Bdays = sqlobj.GetBirthdayList();
 
     private List<Person> FilterBirthdays(List<Person> allBirthdays)
     {
@@ -66,5 +64,20 @@
         return allBirthdays
             .Where(person => person.Bday >= today && person.Bday <= sixDaysFromNow)
             .ToList();
+    }
+    private void Forward() // metode boindet to a button 
+    {
+        Dateobj.UpdateDate(6);// goes 6 Forward on click
+    }
+    private void backwards()// metode bindet to a button
+    {
+        Dateobj.UpdateDate(-6);//goes 6 days backwards on click
+    }
+    private void Register()
+    {
+        sqlobj.AddSqlPerson(personobj); // Register the person
+
+        // Show a JavaScript alert with the message "You are registered"
+        JSRuntime.InvokeVoidAsync("alert", "You are registered");
     }
 }
