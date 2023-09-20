@@ -58,7 +58,7 @@
         
     }
 
-    private List<Person> FilterBirthdaysWithinNextSixDays(List<Person> allBirthdays)
+    private List<Person> FilterBirthdays(List<Person> allBirthdays)
     {
         DateOnly today = DateOnly.FromDateTime(DateTime.Now);
         DateOnly sixDaysFromNow = today.AddDays(6);
