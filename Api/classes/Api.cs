@@ -1,11 +1,13 @@
 ﻿using System;
 using Google.Apis.Calendar.v3;
+using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
 
 namespace Api.classes
 {
     public class Api
     {
+        string output;
         const string ApiKey = "AIzaSyB3Lb5siSaXbEB8ZanqW25wSOPLPguO3O4"; // my APi KEY google
         const string CalenderId = "da.danish#holiday@group.v.calendar.google.com";// calendar id
         public Google.Apis.Calendar.v3.Data.Events response { get; set; }
@@ -23,7 +25,7 @@ namespace Api.classes
             response = request.Execute();
         }
 
-        public bool IsHoliday(DateTime date) 
+        public bool IsHoliday(DateTime date)
         {
             foreach (var item in response.Items)
             {
@@ -36,8 +38,20 @@ namespace Api.classes
             }
             return false;// Returns false if it's not a holiday
         }
-
+        public string GetHolidayName(DateTime date)
+        {
+            foreach (var item in response.Items)
+            {
+                DateTime startDate = DateTime.Parse(item.Start.Date);
+                //Check if the start date of a holiday event matches the given date
+                if (startDate.Date == date.Date)
+                {
+                    output = item.Summary;
+                    return output;// returns the holyday name/event day
+                }
+            }
+            return output = ""; // If no matching holiday is found, return ""
+        }
 
     }
-
 }

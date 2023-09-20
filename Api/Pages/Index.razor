@@ -2,59 +2,69 @@
 @using Api.classes
 @inject IJSRuntime JSRuntime
 
-    <h1 class="H">current and next 6 days</h1>
-    <table class="Table">
-        <thead class="Thead">
+<h1>caldendar, events and birthdays</h1>
+<div class="form-group">
+    <input id="Fname" class="form-control" @bind="personobj.Fname" placeholder="Firstname" />
+    <input id="Lname" class="form-control" @bind="personobj.Lname" placeholder="Lastname" />
+    <input id="Bday" type="date" class="form-control" @bind="personobj.Bday" placeholder="Birthday" />
+    <button class="btn btn-primary" @onclick="() => sqlobj.AddSqlPerson(personobj)">confirm</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Dayname and Date</th>
+            <th>Event</th>
+        </tr>
+    </thead>
+    <tbody class="Tbody">
+        @for (int i = 0; i <=6; i++)
+        {
+            DateTime currentDate = Dateobj.currentDate.Date.AddDays(i);
             <tr>
-                <th>Dayname and Date</th>
-                <th>Holiday</th>
+                <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
+                <td>
+                    @{
+                        var holidayName = APIobj.GetHolidayName(currentDate);
+                        var birthdayPersons = Bdays.Where(person => person.Bday.Day == currentDate.Day&& person.Bday.Month==currentDate.Month).ToList();
+                        if (!string.IsNullOrWhiteSpace(holidayName))
+                        {
+                            <span>Holiday: @holidayName</span>
+                        }
+                        if (birthdayPersons.Any())
+                        {
+                            <span> Birthday(s): @string.Join(", ", birthdayPersons.Select(p => $"{p.Fname} {p.Lname}"))</span>
+                        }
+                        if (!birthdayPersons.Any() && string.IsNullOrWhiteSpace(holidayName))
+                        {
+                            <span> No event</span>
+                        }
+                    }
+                </td>
             </tr>
-        </thead>
-        <tbody class="Tbody">
-            @for (int i = 0; i < 7; i++) // Loop through the next 6 days
-            {
-                <tr>
-                    <!-- Display the current date in day month year -->
-                    <td>@currentDate.ToString("dddd, dd MMMM yyyy")</td>
-
-                    <!-- Check if the current date is a holiday and display the holiday name if it is,
-                    otherwise display "" -->
-                    <td>@(obj.IsHoliday(currentDate) ? GetHolidayName(currentDate):"")</td>
-                </tr>
-                UpdateDate(1);// Move to the next day
-            }
-        </tbody>
-    </table>
-
+        }
+    </tbody>
+</table>
 
 @code {
-    //objcet of Api class
-    Api obj = new Api();
-    DateTime currentDate = DateTime.Now;
-    //Sql obj2 = new Sql();
+    Api APIobj = new Api();
+    Date Dateobj = new Date();
+    Person personobj = new Person() {Bday= DateOnly.FromDateTime(DateTime.Now) };
+    Sql sqlobj = new Sql();
+    List<Person> Bdays;
 
-    //add dayes and then update 
-    private void UpdateDate(int daysToAdd)
+    protected override void OnInitialized()
     {
-        currentDate = currentDate.AddDays(daysToAdd);
+        Bdays = sqlobj.GetBirthdayList();
+        
     }
-    //public void onanitilatior()
-    //{
-    //    obj2.test();
-    //}
 
-    // Method to retrieve the holiday name for a given date
-    string GetHolidayName(DateTime date)
+    private List<Person> FilterBirthdaysWithinNextSixDays(List<Person> allBirthdays)
     {
-        foreach (var item in obj.response.Items)
-        {
-            DateTime startDate = DateTime.Parse(item.Start.Date);
-            //Check if the start date of a holiday event matches the given date
-            if (startDate.Date == date.Date)
-            {
-                return item.Summary;// returns the holyday name/event day
-            }
-        }
-        return ""; // If no matching holiday is found, return ""
+        DateOnly today = DateOnly.FromDateTime(DateTime.Now);
+        DateOnly sixDaysFromNow = today.AddDays(6);
+
+        return allBirthdays
+            .Where(person => person.Bday >= today && person.Bday <= sixDaysFromNow)
+            .ToList();
     }
 }
