@@ -104,6 +104,55 @@ namespace Api.classes
                     reader.Close(); // Close the reader
                 }
             }
+
+        }
+        public void UpdateSqlPerson(Person person)
+        {
+            using (SqlConnection conn = new SqlConnection("Data Source=192.168.23.220,1433;Initial Catalog=fødelsdatabase;Persist Security Info=True;User ID=JM;Password=Passw0rd"))
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "UPDATE Person SET Firstname = @Fname, Lastname = @Lname, Dateofbirth = @Bday WHERE PersonID = @id";
+                    cmd.Parameters.AddWithValue("@id", person.Id); // Use PersonID here
+                    cmd.Parameters.AddWithValue("@Fname", person.Fname);
+                    cmd.Parameters.AddWithValue("@Lname", person.Lname);
+                    cmd.Parameters.AddWithValue("@Bday", person.Bday.ToString("yyyy-MM-dd"));
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public Person GetPersonById(int id)
+        {
+            using (SqlConnection conn = new SqlConnection("Data Source=192.168.23.220,1433;Initial Catalog=fødelsdatabase;Persist Security Info=True;User ID=JM;Password=Passw0rd"))
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SELECT * FROM Person WHERE PersonID = @id";
+                    cmd.Parameters.AddWithValue("@Id", id);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows && reader.Read())
+                    {
+                        Person person = new Person();
+                        try { person.Id = reader.GetInt32(0); } catch { person.Id = 0; }
+                        try { person.Fname = reader.GetString(1); } catch { person.Fname = "null"; }
+                        try { person.Lname = reader.GetString(2); } catch { person.Lname = "null"; }
+                        person.Bday = DateOnly.FromDateTime(reader.GetDateTime(3));
+
+                        return person;
+                    }
+                }
+            }
+
+            return null; // Return null if the person with the specified ID is not found
         }
     }
 }

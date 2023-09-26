@@ -1,0 +1,89 @@
+﻿@page "/personlist"
+@inject IJSRuntime JSRuntime
+@using Api.classes
+
+<h1>Person List</h1>
+<div class="form-group">
+    <input id="Fname" class="form-control" @bind="personobj.Fname" placeholder="Firstname" />
+    <input id="Lname" class="form-control" @bind="personobj.Lname" placeholder="Lastname" />
+    <input id="Bday" type="date" class="form-control" @bind="personobj.Bday" placeholder="Birthday" />
+    <button class="btn btn-primary" @onclick="Register">confirm</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birthday</th>
+            <th>Edit</th>
+            <th>Save</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in People)
+        {
+            <tr>
+                <td>@person.Id</td>
+                @if (!person.IsEditing)
+                {
+                    <td>@person.Fname</td>
+                    <td>@person.Lname</td>
+                    <td>@person.Bday.ToString("yyyy-MM-dd")</td>
+                    <td><button class="btn btn-primary" @onclick="() => EditPerson(person)">Edit</button></td>
+                }
+                else
+                {
+                    <td><input @bind="person.Fname" /></td>
+                    <td><input @bind="person.Lname" /></td>
+                    <td><input type="date" @bind="person.Bday" /></td>
+                    <td>
+                        <button class="btn btn-success" @onclick="() => SavePerson(person)">Save</button>
+                        <button class="btn btn-danger" @onclick="() => CancelEdit(person)">Cancel</button>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    Api APIobj = new Api();
+    Date Dateobj = new Date();
+    Person personobj = new Person() { Bday = DateOnly.FromDateTime(DateTime.Now) };
+    Sql sqlobj = new Sql();
+    List<Person> Bdays;
+    List<Person> People;
+
+    protected override void OnInitialized()
+    {
+        // Fetch data from the database and populate the People list
+        Sql sqlobj = new Sql();
+        People = sqlobj.GetBirthdayList();
+    }
+    private void Register()
+    {
+        sqlobj.AddSqlPerson(personobj); // Register the person
+
+        // Show a JavaScript alert with the message "You are registered"
+        JSRuntime.InvokeVoidAsync("alert", "You are registered");
+    }
+    private void EditPerson(Person person)
+    {
+        person.IsEditing = true;
+    }
+
+    private void SavePerson(Person person)
+    {
+        sqlobj.UpdateSqlPerson(person); // Update the person in the database
+        person.IsEditing = false;
+    }
+
+    private void CancelEdit(Person person)
+    {
+        // Reset the person's properties to their original values
+        personobj = sqlobj.GetPersonById(person.Id);
+        person.IsEditing = false;
+    }
+}
+

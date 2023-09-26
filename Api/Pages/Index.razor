@@ -1,14 +1,10 @@
 ﻿@page "/"
 @using Api.classes
-@inject IJSRuntime JSRuntime
 
-<h1>caldendar, events and birthdays</h1>
-<div class="form-group">
-    <input id="Fname" class="form-control" @bind="personobj.Fname" placeholder="Firstname" />
-    <input id="Lname" class="form-control" @bind="personobj.Lname" placeholder="Lastname" />
-    <input id="Bday" type="date" class="form-control" @bind="personobj.Bday" placeholder="Birthday" />
-    <button class="btn btn-primary" @onclick="Register">confirm</button>
-</div>
+
+<h1>caldendar, events and birthdays</h1>     <!-- Add a button to navigate to the Person List page -->
+<button class="btn btn-primary" @onclick="NavigateToPersonList">Go to Person List</button>
+
 <table>
     <thead>
         <tr>
@@ -28,7 +24,7 @@
                         var birthdayPersons = Bdays.Where(person => person.Bday.Day == currentDate.Day&& person.Bday.Month==currentDate.Month).ToList();
                         if (!string.IsNullOrWhiteSpace(holidayName))
                         {
-                            <span>Holiday: @holidayName</span>
+                            <span> Holiday: @holidayName</span>
                         }
                         if (birthdayPersons.Any())
                         {
@@ -73,11 +69,12 @@
     {
         Dateobj.UpdateDate(-6);//goes 6 days backwards on click
     }
-    private void Register()
-    {
-        sqlobj.AddSqlPerson(personobj); // Register the person
 
-        // Show a JavaScript alert with the message "You are registered"
-        JSRuntime.InvokeVoidAsync("alert", "You are registered");
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+    private void NavigateToPersonList()
+    {
+        // Use the NavigationManager to navigate to the Person List page
+        NavigationManager.NavigateTo("/personlist");
     }
 }
