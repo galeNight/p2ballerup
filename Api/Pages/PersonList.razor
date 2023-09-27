@@ -1,8 +1,10 @@
 ﻿@page "/personlist"
 @inject IJSRuntime JSRuntime
 @using Api.classes
+@inject NavigationManager NavigationManager
 
 <h1>Person List</h1>
+<button class="btn btn-primary" @onclick="NavigateToPersonList">Go to Caldenday</button>
 <div class="form-group">
     <input id="Fname" class="form-control" @bind="personobj.Fname" placeholder="Firstname" />
     <input id="Lname" class="form-control" @bind="personobj.Lname" placeholder="Lastname" />
@@ -84,6 +86,11 @@
         // Reset the person's properties to their original values
         personobj = sqlobj.GetPersonById(person.Id);
         person.IsEditing = false;
+    }
+    private void NavigateToPersonList()
+    {
+        // Use the NavigationManager to navigate to the Person List page
+        NavigationManager.NavigateTo("/");
     }
 }
 
