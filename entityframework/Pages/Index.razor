@@ -1,0 +1,9 @@
+﻿@page "/"
+@using entityframework.Pages
+@inject MydbContext dbcontext
+
+
+@foreach(var person in dbcontext.People)
+{
+    <p>@person.FirstName @person.LastName</p>
+}
