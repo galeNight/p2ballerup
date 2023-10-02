@@ -1,4 +1,28 @@
-﻿@page "addPerson"
+﻿@page "/addPerson"
 @using entityframework.Pages
 @inject MydbContext dbcontext
 
+<div>
+    <label for="firstName">First Name:</label>
+    <input id="firstName" @bind="newPerson.FirstName" />
+</div>
+<div>
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" @bind="newPerson.LastName" />
+</div>
+<div>
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input id="dateOfBirth" type="date" @bind="newPerson.DateOfBirth" />
+</div>
+<button @onclick="AddPerson">Add Person</button>
+
+@code {
+    private EFPerson newPerson = new EFPerson();
+
+    private void AddPerson()
+    {
+        dbcontext.People.Add(newPerson);
+        dbcontext.SaveChanges();
+        newPerson = new EFPerson();
+    }
+}
